@@ -1,7 +1,9 @@
-require 'minitest_helper' 
+require 'minitest_helper'
 require 'card'
 
 class TestCard < Minitest::Test
+
+  # --- class methods
 
   def test_valid_create
     card = Card.create('Kc')
@@ -22,6 +24,8 @@ class TestCard < Minitest::Test
       Card.create('Kcc')
     end
   end
+
+  # --- instance methods
 
   def setup
     @card = Card.create('As')
